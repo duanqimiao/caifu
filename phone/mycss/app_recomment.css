@@ -73,6 +73,9 @@ th{
     font-weight: normal;
     color: #808080;
 }
+td{
+    font-size: 0.9em;
+}
 .code{
    color: #808080;
 }

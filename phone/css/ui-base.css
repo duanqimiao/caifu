@@ -205,7 +205,7 @@ ul, li {
 }
 
 .uh .ut, .uf .ut {
-    padding: .5em 1em .5em;
+    padding: .72em 1em .72em;
     margin: 0;
 }
 
@@ -236,7 +236,7 @@ ul, li {
     font-size: 0.625em !important;
 }
 .ulev-3 {
-    font-size: 1.3em !important;
+    font-size: 1.0625em !important;
 }
 .ulev-4 {
     font-size: 0.75em !important;
