@@ -3,7 +3,7 @@
     <head>
         <title></title>
         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="css/ui-box.css">
         <link rel="stylesheet" href="css/ui-base.css">
@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="css/appcan.icon.css">
         <link rel="stylesheet" href="css/appcan.control.css">
         <link rel="stylesheet" href="mycss/app_base.css"/>
+        <link rel="stylesheet" href="mycss/app_recomment.css">
     </head>
-    <body class="um-vp " ontouchstart>
+    <body class="um-vp"ontouchstart>
         <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
             <!--header开始-->
             <div id="header" class="uh bc-text-head ub bc-head">
@@ -24,7 +25,7 @@
             </div>
             <!--header结束--><!--content开始-->
             <div id="content" class="ub-f1 tx-l">
-
+                
             </div>
 
             <div class="uf ub bc-color-footer">
@@ -60,10 +61,11 @@
     <script>
         appcan.ready(function() {
             var titHeight = $('#header').offset().height;
-            appcan.frame.open("content", "app_recomment_content.html", 0, titHeight);
+            appcan.frame.open("content", "recomment_content.html", 0, titHeight);
             window.onorientationchange = window.onresize = function() {
                 appcan.frame.resize("content", 0, titHeight);
             }
+          
         });
         appcan.button(".nav-btn", "btn-act", function() {
             appcan.window.close(-1);
