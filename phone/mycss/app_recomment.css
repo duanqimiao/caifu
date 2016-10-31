@@ -43,8 +43,7 @@ input[type="radio"]+ label.news{
     background: #fff;
     width: 100%;
 }
-.join{
-   
+.join{  
     padding:0.7em 0 0 0.5em;
     height: 3em;
     border-bottom: 1px solid #eee;

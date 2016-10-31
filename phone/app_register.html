@@ -2,7 +2,7 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="myjs/jquery.min.js"></script>
         <link rel="stylesheet" href="amazeUI/css/amazeui.css"/>
         <link rel="stylesheet" href="amazeUI/css/amazeui.flat.css"/>
@@ -79,7 +79,7 @@
             appcan.window.close(-1);
         });
         appcan.button("#sms_btn", "btn-act", function() {
-            
+
             var phone = $("#phone").val().trim();
             if (!reg.test(phone)) {
                 //不是手机号
@@ -87,20 +87,20 @@
                 return;
             } else {
                 //请求短信接口;
-                var url="";
+                var url = "";
                 // settime(this);
                 appcan.request.ajax({
-                    url:url,
-                    type:'POST',
-                    data:{
-                        phone:phone
+                    url : url,
+                    type : 'POST',
+                    data : {
+                        phone : phone
                     },
-                    success:function(data){
+                    success : function(data) {
                         //60s倒计时
-                        appcan.window.openToast("验证码已发送成功",3000,5,0);
+                        appcan.window.openToast("验证码已发送成功", 3000, 5, 0);
                         settime(this);
                     },
-                    error:function(e){
+                    error : function(e) {
                         alert(e);
                     }
                 });
@@ -121,6 +121,7 @@
                 settime(obj)
             }, 1000)
         }
+
 
         appcan.button(".register_div", "btn-act", function() {
             var user_name = $("#user_name").val().trim();
@@ -163,11 +164,11 @@
                 appcan.window.openToast("正在注册……");
                 // appcan.window.evaluateScript("app_register", "appcan.window.close()");
                 appcan.request.postForm($("am-form"), function(data) {
-                    appcan.window.openToast("注册成功",3000,5,0);
-                    appcan.window.alert("提示", "注册成功返回值："+data);
+                    appcan.window.openToast("注册成功", 3000, 5, 0);
+                    appcan.window.alert("提示", "注册成功返回值：" + data);
                     appcan.window.open("app_login", "app_login.html", 0);
                 }, function(err) {
-                    appcan.window.alert("提示", "连接服务器失败！"+err);
+                    appcan.window.alert("提示", "连接服务器失败！" + err);
                 });
             }
         });

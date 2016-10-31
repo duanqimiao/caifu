@@ -6,7 +6,7 @@
 	<author email=""> </author>
 	<icon src="icon.png"/>
 	<license href=""/>
-	<content encoding="utf-8" src="app_login.html"/>
+	<content encoding="utf-8" src="app_recomment.html"/>
 	<updateurl/>
 	<logserverip/> 
 	<showmyspace>false</showmyspace>
